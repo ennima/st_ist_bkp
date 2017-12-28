@@ -1,0 +1,1 @@
+INSERT INTO `istorage`.`clips` (`id`, `name`, `created_date`, `modified_date`, `duration`, `path`, `has_pxy`, `archived_date`, `archived_user`, `original_path`, `format`, `origin`, `storage`) VALUES (NULL, 'test', NULL, NULL, NULL, NULL, '0', '2017-12-27 00:00:00', 'ennima', NULL, '0', '0', '1');

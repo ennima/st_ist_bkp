@@ -2,4 +2,22 @@
 	"user":"media manager"
 	,"data_path":"C:\\Users\\enrique.nieto\\Documents\\develops 2017\\Milenio\\restore_datax.csv"
 	,"history_path":"C:\\Users\\enrique.nieto\\Documents\\develops 2017\\Milenio\\Stratus_istorage\\hitory_lists\\"
+	,"origin_ftp_server":{
+		"host":"SMEX-FTP1_he0"
+		,"user":"mxfmovie"
+		,"pass":""
+		,"db_id":1
+	}
+	,"origin_pxy_server":"W"
+	,"origin_format":1
+	,"origin_db_id":1
+	,"dest_ftp_server":{
+		"host":"ISTORAGE-B1"
+		,"user":"dvcpro"
+		,"pass":"dvcpro01"
+		,"db_id":4
+	}
+	,"dest_folder":"array1/dvcpro/notis2017"
+	,"dest_db_id":4
+	,"istorage_api_store_clip":"http://192.168.48.93:3000/store_clip"
 }
