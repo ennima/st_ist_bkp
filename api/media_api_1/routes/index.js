@@ -19,19 +19,39 @@ function get_params(req){
 }
 /* GET home page. */
 
-  db.executeQuery("SELECT * FROM `clips`;",function(error, data){
-      console.log(error);
+
+console.log("Media Api Jalando...")
+  // Prevenir error de conection closed
+setInterval(function () {
+	  // db.query('SELECT 1');
+
+	  var query = "SELECT 1;";
+	  db.executeQuery(query,function(error, data){
+	      console.log(error);
+	  	  console.log("--v^---Manteniendo connection:");
+	  	  console.log(data);
+		});
+
+	}, 5000);
+
+  db.executeQuery("SELECT * FROM clips ORDER BY id DESC LIMIT 1;",function(error, data){
+      console.log(error)
+      console.log("")
+      console.log(data)
+
   		// utilidades.cors(res);
 		// res.send(data);
 		console.log(data)
 	});
+
+
 
 router.get('/', function(req, res, next) {
   
   params = get_params(req)
   if(params == false){
   	console.log("No hay nada que hacer")
-  	res.send({val1:"shit"})
+  	res.send({runing:"true"})
   }else{
   	res.send(params)
   }

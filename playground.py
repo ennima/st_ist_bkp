@@ -121,17 +121,6 @@ if(os.path.exists(backup_list_path)):
 		print(item["folder"]+"\\"+item["clip"])
 		print("Descargando.")
 		tiempo_inicial = time_i() 
-		# ftp = FTP(conf["origin_ftp_server"]["host"])
-		# print(ftp.login(conf["origin_ftp_server"]["user"],conf["origin_ftp_server"]["pass"]))
-		# ftp.cwd(item["folder"])
-		# print("Descargando: "+item["clip"])
-		# try:
-		# 	ftp.retrbinary('RETR '+item["clip"], open(item["clip"], 'wb').write)
-		# 	download_success = True
-		# except all_errors as e:
-		# 	print(e)
-		
-		# ftp.quit()
 		download_time = ftp_download(item,conf)
 		print( item["clip"] + " listo para ingestar.")
 		##Ingestar material
