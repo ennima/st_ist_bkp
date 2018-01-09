@@ -1,0 +1,30 @@
+[
+	{
+		"storage_id":4
+		,"capacity":36937.9
+		,"used":17446.2
+		,"units":"GB"
+		,"used_percent":47.23
+	}
+	,{
+		"storage_id":3
+		,"capacity":40.0
+		,"used":22.2
+		,"units":"TB"
+		,"used_percent":55.6
+	}
+	,{
+		"storage_id":2
+		,"capacity":10.8
+		,"used":6.3
+		,"units":"TB"
+		,"used_percent":60
+	}
+	,{
+		"storage_id":1
+		,"capacity":35.8
+		,"used":16.4
+		,"units":"TB"
+		,"used_percent":45.7
+	}
+]
