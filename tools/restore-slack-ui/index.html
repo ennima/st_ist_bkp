@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/vendor/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/index.css">
-	<style>
+	<!-- <style>
 
 		.input-largo{
 			padding-left: 15px;
@@ -50,21 +50,21 @@
 			display: flex;
 			
 		}
-	</style>
+	</style> -->
 </head>
 <body>
 
 <div id="title_bar">
 	<div id="logo">icon</div>
 	<div id="title">Software title</div>
-	<div id="controls">		
+	<div id="controls">
 		<div id="max">x</div>
 		<div id="rest">♫</div>
 		<div id="min">-</div>
 	</div>
 </div>
 	<!-- Barra de estado -->
-<div class="container-fluid">
+<div class="container-fluid full-container-ui">
   <div class="row">
     <div class="col-12">
       <div id="status_bar">
@@ -88,7 +88,7 @@
         <input id="clip_name" type="text" class="form-control" placeholder="Clip Name" data-toggle="tooltip" data-placement="top" title="¿Cómo se llama el clip?">
        </div>
        <div class="col-4 input-largo-secundario">
-        <input id="clip_path" type="text" class="form-control" placeholder="Path" data-toggle="tooltip" data-placement="bottom" title="¿Dónde se encuentra el clip?">
+        <input id="clip_path" type="text" class="form-control typeahead" placeholder="Path" data-toggle="tooltip" data-placement="bottom" title="¿Dónde se encuentra el clip?">
        </div>
        <div id="button-pedir-area" class="col-2">
         <button id="pedir_btn" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Click para solicitar a ingeniería recuperar un material.">Pedir</button>
@@ -132,10 +132,13 @@
 
 
 
+
+
+
 	<script src="./js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="./js/vendor/popper.min.js"></script>
 	<script src="./js/vendor/bootstrap.min.js"></script>
-
+	<script src="./js/vendor/my_typeahead.js"></script>
 	<script src="./js/index.js"></script>
 
 </body>

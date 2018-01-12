@@ -1,3 +1,68 @@
+/*Slack Dark Title Palette*/
+/*APP Dark Title Palette*/
+/* $app-dark-contrast:rgb(72, 206, 113);
+$app-dark-contrast-dark:rgb(45, 79, 55); */
+/* Semaforo colors*/
+/*App Window Style*/
+#title_bar {
+  background-color: #210f35;
+  color: #b8b0b7;
+  /* border:1px solid green; */
+  width: 100%;
+  display: flex;
+  height: 40px;
+  /*line-height: 40px;*/
+  text-align: center; }
+  #title_bar div {
+    /* color:#333; */ }
+  #title_bar #logo {
+    /* border:1px solid blue; */
+    width: 10%;
+    height: 40px;
+    line-height: 40px; }
+  #title_bar #title {
+    /* border:1px solid indigo; */
+    width: 75%;
+    height: 40px;
+    line-height: 40px; }
+  #title_bar #controls {
+    /* border:1px solid coral; */
+    width: 15%;
+    height: 40px;
+    /*line-height: 40px;*/
+    display: flex;
+    flex-direction: row-reverse; }
+    #title_bar #controls div {
+      /* border: 1px solid red; */
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      float: right;
+      color: #fff; }
+    #title_bar #controls #max {
+      /* background-color:$app-dark-close-btn; */
+      border: 1px solid #b8b0b7;
+      border-radius: 0px 0px 5px 0px; }
+      #title_bar #controls #max:hover {
+        border: 1px solid #ce6161; }
+    #title_bar #controls #min {
+      /* background-color:$app-dark-min-btn; */
+      border: 1px solid #867984;
+      border-radius: 0px 0px 0px 5px; }
+      #title_bar #controls #min:hover {
+        border: 1px solid #61ce64; }
+    #title_bar #controls #rest {
+      /* background-color:$app-dark-restore-btn; */
+      border: 1px solid #867984;
+      border-left: none;
+      border-right: none;
+      color: #585858; }
+      #title_bar #controls #rest:hover {
+        border: 1px solid #eac778; }
+
+/*APP Content Style*/
+/* $medium-light-color: #999; */
+/* $medium-dark-color: #3f334c; */
 #status_bar {
   background-color: #3e0082;
   width: 100%;
@@ -29,55 +94,71 @@
     padding-right: 5px;
     height: 20px;
     line-height: 20px;
-    color: #999; }
+    color: #b8b0b7; }
     #status_bar p span {
       font-weight: 100;
       color: #ffffff; }
 
 #peticion-form {
   /*background-color:#999;*/
-  padding: 10px;
-  margin: 10px opx; }
+  padding: 10px 0px;
+  margin: 10px 0px; }
   #peticion-form #button-pedir-area {
     text-align: right; }
 
 #peticion_area {
   border: 1px solid;
-  border-color: #999;
+  border-color: #b8b0b7;
   width: 100%;
   height: 200px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  padding-left: 0px;
+  padding-right: 0px;
+  /* inicia peticion item*/
+  /* termina peticion item*/ }
+  #peticion_area #peticion_item {
+    width: 100%;
+    /*background-color:#9fa;*/
+    background-color: #210f35;
+    color: #b8b0b7;
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px; }
+    #peticion_area #peticion_item .logo {
+      /*background-color:#eef;*/
+      width: 5%;
+      font-size: 20px;
+      height: 30px;
+      line-height: 30px; }
+    #peticion_area #peticion_item p {
+      float: left;
+      /*background-color: #e99;*/
+      margin-left: 5px;
+      margin-top: 0px;
+      /* font-weight: bold; */
+      font-size: 0.9em;
+      text-align: right;
+      padding-right: 5px;
+      height: 30px;
+      /*line-height: $peticion_item_height;*/ }
+    #peticion_area #peticion_item #nombre_peticion {
+      width: 70%;
+      color: #61ce82; }
+    #peticion_area #peticion_item #fecha_peticion {
+      width: 25%; }
 
-#peticion_item {
-  width: 100%;
-  /*background-color:#9fa;*/
-  background-color: #3f334c;
-  color: #999;
-  display: flex;
-  height: 30px;
-  line-height: 30px;
-  margin-bottom: 5px; }
-  #peticion_item .logo {
-    /*background-color:#eef;*/
-    width: 5%;
-    font-size: 20px;
-    height: 30px;
-    line-height: 30px; }
-  #peticion_item p {
-    float: left;
-    /*background-color: #e99;*/
-    margin-left: 5px;
-    margin-top: 0px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-align: right;
-    padding-right: 5px;
-    height: 30px;
-    /*line-height: $peticion_item_height;*/ }
-  #peticion_item #nombre_peticion {
-    width: 70%; }
-  #peticion_item #fecha_peticion {
-    width: 25%; }
+/*Sobreescribir inputs y otros*/
+.input-largo {
+  padding-left: 15px;
+  padding-right: 0px; }
+
+.input-largo-secundario {
+  padding-right: 0px; }
+
+.full-container-ui {
+  padding-left: 0px;
+  padding-right: 0px; }
 
 /*Sobre escribir boostrap*/
 .btn-primary {
@@ -99,5 +180,83 @@
 .form-control:focus {
   border-color: #6f42c1;
   box-shadow: inset 0 1px 1px rgba(111, 66, 193, 0.075), 0 0 8px rgba(111, 66, 193, 0.6); }
+
+.twitter-typeahead {
+  display: block; }
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 396px;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  outline: none; }
+
+.typeahead {
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  height: inherit;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+
+.typeahead:focus {
+  /* border: 2px solid #0097cf; */ }
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.tt-hint {
+  color: #999; }
+
+.tt-menu {
+  width: 422px;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px; }
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #3e0082; }
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #3e0082; }
+
+.tt-suggestion p {
+  margin: 0; }
+
+.gist {
+  font-size: 14px;
+  color: red; }
 
 /*# sourceMappingURL=index.css.map */

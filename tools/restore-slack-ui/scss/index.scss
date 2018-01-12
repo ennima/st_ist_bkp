@@ -1,9 +1,122 @@
+/*Slack Dark Title Palette*/
+$slack-dark-title-bg:rgb(77, 57, 75);
+$slack-dark-title-bg-dark:rgb(52, 32, 50);
+$slack-dark-title-font:rgb(184, 176, 183);
+$slack-dark-title-font-dark:rgb(184, 176, 183);
+$slack-dark-title-font-light: rgb(255, 255, 255);
+$slack-dark-title-contrast:rgb(76, 150, 137);
+$slack-logo-yellow: rgb(223, 160, 29);
+
+
+/*APP Dark Title Palette*/
+$app-dark-title-bg:rgb(62, 0, 130);
+$app-dark-title-bg-dark:rgb(33, 15, 53);
+
+$app-dark-title-font:rgb(184, 176, 183);
+$app-dark-title-font-dark:rgb(134, 121, 132);
+$app-dark-title-font-light: rgb(255, 255, 255);
+
+/* $app-dark-contrast:rgb(72, 206, 113);
+$app-dark-contrast-dark:rgb(45, 79, 55); */
+$app-dark-contrast:rgb(97, 206, 130);
+$app-dark-contrast-dark:rgb(52, 79, 60);
+$app-dark-contrast-2:rgb(143,109,60);
+$app-dark-high-light:#fff;
+
+/* Semaforo colors*/
+$app-dark-close-btn:rgb(206, 97, 97);
+$app-dark-min-btn:rgb(97, 206, 100);
+$app-dark-restore-btn:rgb(234, 199, 120);
+$app-dark-restore-btn-font: rgb(88, 88, 88);
+
+
+/*App Window Style*/
+#title_bar
+{
+  background-color:$app-dark-title-bg-dark;
+  color:$app-dark-title-font;
+  /* border:1px solid green; */
+  width: 100%;
+  display: flex;
+  height: 40px;
+  /*line-height: 40px;*/
+  text-align: center;
+  
+  
+  div{
+    /* color:#333; */
+  }
+  
+  #logo{
+    /* border:1px solid blue; */
+    width: 10%;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  #title{
+    /* border:1px solid indigo; */
+    width: 75%;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #controls{
+    /* border:1px solid coral; */
+    width: 15%;
+    height: 40px;
+    /*line-height: 40px;*/
+    display: flex;
+    flex-direction: row-reverse;
+    div{
+      /* border: 1px solid red; */
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      float: right;
+      color:$app-dark-high-light;
+    }
+    #max{
+      /* background-color:$app-dark-close-btn; */
+      border: 1px solid $app-dark-title-font;
+      border-radius: 0px 0px 5px 0px;
+      &:hover{
+        border: 1px solid $app-dark-close-btn;
+      }
+    }
+   
+    #min{
+      /* background-color:$app-dark-min-btn; */
+      border: 1px solid $app-dark-title-font-dark;
+      border-radius: 0px 0px 0px 5px;
+      &:hover{
+        border: 1px solid $app-dark-min-btn;
+      }
+    }
+    #rest{
+      /* background-color:$app-dark-restore-btn; */
+      border: 1px solid $app-dark-title-font-dark;
+      border-left: none;
+      border-right: none;
+      color:$app-dark-restore-btn-font;
+      
+      &:hover{
+        border: 1px solid $app-dark-restore-btn;
+      }
+    }
+  }
+
+}
+
+/*APP Content Style*/
 $status_bar_height: 40px;
 $peticion_item_height: 30px;
-$brand-color: #3e0082;
+$brand-color: $app-dark-title-bg;
 $light-color: #ffffff;
-$medium-light-color: #999;
-$medium-dark-color: #3f334c;
+/* $medium-light-color: #999; */
+$medium-light-color: $app-dark-title-font;
+/* $medium-dark-color: #3f334c; */
+$medium-dark-color: $app-dark-title-bg-dark;
 #status_bar{
   background-color:$brand-color;
   width: 100%;
@@ -48,8 +161,8 @@ $medium-dark-color: #3f334c;
 }
 #peticion-form{
   /*background-color:#999;*/
-  padding:10px;
-  margin: 10px opx;
+  padding: 10px 0px;
+  margin: 10px 0px;
   #button-pedir-area{
     text-align:right;
   }
@@ -62,48 +175,70 @@ $medium-dark-color: #3f334c;
   width: 100%;
   height: 200px;
   overflow-y: scroll;
-}
+  padding-left: 0px;
+  padding-right: 0px;
+  
+/* inicia peticion item*/  
 
-#peticion_item{
-  width:100%;
-  /*background-color:#9fa;*/
-  background-color: $medium-dark-color;
-  color:$medium-light-color;
-  display: flex;
-  height: $peticion_item_height;
-  line-height: $peticion_item_height;
-  margin-bottom:5px;
-  .logo{
-    /*background-color:#eef;*/
-    width:5%;
-    font-size: 20px;
+  #peticion_item{
+    width:100%;
+    /*background-color:#9fa;*/
+    background-color: $medium-dark-color;
+    color:$medium-light-color;
+    display: flex;
     height: $peticion_item_height;
     line-height: $peticion_item_height;
+    margin-bottom:5px;
+    .logo{
+      /*background-color:#eef;*/
+      width:5%;
+      font-size: 20px;
+      height: $peticion_item_height;
+      line-height: $peticion_item_height;
+      
+    }
+
+     p{
+      float: left;
+      /*background-color: #e99;*/
+      margin-left: 5px;
+      margin-top: 0px;
+      /* font-weight: bold; */
+      font-size: 0.9em;
+      text-align: right;
+      padding-right: 5px;
+      height: $peticion_item_height;
+      /*line-height: $peticion_item_height;*/
+    }
+    #nombre_peticion{
+      width:70%;
+      color:$app-dark-contrast;
+
+    }
+    #fecha_peticion{
+      width:25%;
+
+    }
+
   }
-  
-   p{
-    float: left;
-    /*background-color: #e99;*/
-    margin-left: 5px;
-    margin-top: 0px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-align: right;
-    padding-right: 5px;
-    height: $peticion_item_height;
-    /*line-height: $peticion_item_height;*/
-  }
-  #nombre_peticion{
-    width:70%;
-    
-  }
-  #fecha_peticion{
-    width:25%;
-    
-  }
-  
+
+/* termina peticion item*/
 }
 
+
+
+/*Sobreescribir inputs y otros*/
+.input-largo{
+  padding-left: 15px;
+  padding-right: 0px;
+}
+.input-largo-secundario{
+  padding-right: 0px;
+}
+.full-container-ui{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 /*Sobre escribir boostrap*/
 .btn-primary {
@@ -128,4 +263,103 @@ $medium-dark-color: #3f334c;
   border-color: #6f42c1;
   box-shadow: inset 0 1px 1px rgba(111, 66, 193, 0.075), 0 0 8px rgba(111, 66, 193, 0.6);
   
+}
+
+
+
+
+
+
+
+
+.twitter-typeahead{
+  display: block;
+}
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 396px;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+  
+    display: block;
+    width: 100%;
+    height: inherit;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  
+}
+
+.typeahead:focus {
+  /* border: 2px solid #0097cf; */
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {
+  width: 422px;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: $app-dark-title-bg;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: $app-dark-title-bg;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.gist {
+  font-size: 14px;
+  color:red;
 }
