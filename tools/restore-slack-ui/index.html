@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/vendor/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<style>
+
+		.input-largo{
+			padding-left: 15px;
+    		padding-right: 0px;
+		}
+		.input-largo-secundario{
+			padding-right: 0px;
+		}
+		#peticion-form {
+		    /* background-color: #999; */
+		    padding: 10px 0px;
+		    margin: 10px 0px;
+		}
+		#title_bar{
+			border:1px solid green;
+			width: 100%;
+			display: flex;
+			height: 40px;
+			/*line-height: 40px;*/
+			text-align: center;
+		}
+		#title_bar #logo{
+			border:1px solid blue;
+			width: 10%;
+			height: 40px;
+			line-height: 40px;
+
+		}
+		#title_bar #title{
+			border:1px solid indigo;
+			width: 75%;
+			height: 40px;
+			line-height: 40px;
+			
+		}
+		#title_bar #controls{
+			border:1px solid red;
+			width: 15%;
+			height: 40px;
+			/*line-height: 40px;*/
+			display: flex;
+			
+		}
+	</style>
+</head>
+<body>
+
+<div id="title_bar">
+	<div id="logo">icon</div>
+	<div id="title">Software title</div>
+	<div id="controls">		
+		<div id="max">x</div>
+		<div id="rest">♫</div>
+		<div id="min">-</div>
+	</div>
+</div>
+	<!-- Barra de estado -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div id="status_bar">
+        <i id="logo" class="fa fa-fw" aria-hidden="true"></i>
+        <div id="noticias"></div>
+        <p>Tú: <span id="atiende">Javier Hernández</span></p>
+        <p>Atiende: <span id="atiende">Enrique Nieto</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  
+<!-- Form de peticiones -->
+  <div id="peticion-form" class="form-group">
+    <form>
+       <div class="row">
+       <div class="col-6 input-largo">
+        <input id="clip_name" type="text" class="form-control" placeholder="Clip Name" data-toggle="tooltip" data-placement="top" title="¿Cómo se llama el clip?">
+       </div>
+       <div class="col-4 input-largo-secundario">
+        <input id="clip_path" type="text" class="form-control" placeholder="Path" data-toggle="tooltip" data-placement="bottom" title="¿Dónde se encuentra el clip?">
+       </div>
+       <div id="button-pedir-area" class="col-2">
+        <button id="pedir_btn" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Click para solicitar a ingeniería recuperar un material.">Pedir</button>
+       </div>
+      </div>
+    </form>
+  </div>
+ 
+
+<!-- Área de notificaciones -->
+  <div class="row">
+      <div class="col-sm-12">
+        <div id="log">
+          <div class="alert alert-danger" role="alert">
+            De momento todos en IT estamos resolviendo otros casos, en unos minutos alguno de nosotros se comunica contigo.
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div id="peticion_area" class="col-sm-12">
+    
+      <div id="peticion_item">
+          <i class="fa fa-fw logo" aria-hidden="true"></i>
+          <p id="nombre_peticion">CLIP NAME YA LA HICIMOS</p>
+          <p id="fecha_peticion">10-01-2017 11:27</p>
+      </div>
+      
+
+      
+      
+    </div>
+  </div>
+  
+  
+  
+</div>
+
+
+
+	<script src="./js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="./js/vendor/popper.min.js"></script>
+	<script src="./js/vendor/bootstrap.min.js"></script>
+
+	<script src="./js/index.js"></script>
+
+</body>
+</html>

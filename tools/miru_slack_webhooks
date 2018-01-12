@@ -1,0 +1,40 @@
+#development webhook
+curl -X POST --data-urlencode "payload={\"channel\": \"#development\", \"username\": \"Redactor\", \"text\":\"Ayuda\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+
+
+#General webhook url: https://hooks.slack.com/services/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
+
+					  https://hooks.slack.com/services/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
+
+curl -X POST --data-urlencode "payload={\"channel\": \"#general\", \"username\": \"webhookbot\", \"text\": \"This is posted to #general and comes from a bot named webhookbot.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+
+
+
+
+
+
+
+Mileniotvit
+
+curl -X POST --data-urlencode "payload={\"channel\": \"#aleatorio\", \"username\": \"Javier_hernandez\", \"text\": \"Ext.23999 Recuperar Clip:CORTINILLA PUIG-FT_DF005TE3 Carpeta: V:/PlayToAir \", \"icon_emoji\": \":newspaper:\"}" https://hooks.slack.com/services/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
+
+curl -X POST --data-urlencode "payload={\"channel\": \"#dev_test\", \"username\": \"webhookbot\", \"text\": \"Esto se publica en #general y procede de un robot llamado webhookbot.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+
+Emojis
+
+Redacción:
+
+:page_facing_up:        url: https://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/page_facing_up.png
+:newspaper:				url: https://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/newspaper.png
+
+
+Producción:
+
+:clapper:               url: https://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/clapper.png
+
+Periodismo de marca:
+
+:movie_camera:                graphics/emojis/movie_camera.png
+
+Extras:
+:tv:

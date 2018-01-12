@@ -1,0 +1,131 @@
+$status_bar_height: 40px;
+$peticion_item_height: 30px;
+$brand-color: #3e0082;
+$light-color: #ffffff;
+$medium-light-color: #999;
+$medium-dark-color: #3f334c;
+#status_bar{
+  background-color:$brand-color;
+  width: 100%;
+  display: flex;
+  text-align:center;
+  height: $status_bar_height;
+  color: $light-color;
+  #logo{
+    /*background-color:#eef;*/
+    color:$light-color;
+    width:10%;
+    font-size: 30px;
+  }
+  #noticias{
+    /*background-color: #efe;*/
+    width: 50%;
+    height: $status_bar_height;
+    line-height: $status_bar_height;
+    font-size: 1em;
+    overflow-y:hidden;
+  }   
+  
+  p{
+    float: left;
+    /*background-color: #e99;*/
+    margin-left: 5px;
+    margin-top: 0px;
+    /*font-weight: bold;*/
+    font-size: 0.9em;
+    text-align: right;
+    width: 20%;
+    padding-right: 5px;
+    height: 20px;
+    line-height: 20px;
+    color:$medium-light-color;
+    
+    span{
+      font-weight: 100;
+      color:$light-color;
+    }
+  }
+}
+#peticion-form{
+  /*background-color:#999;*/
+  padding:10px;
+  margin: 10px opx;
+  #button-pedir-area{
+    text-align:right;
+  }
+}
+
+#peticion_area{
+  
+  border: 1px solid;
+  border-color: $medium-light-color;
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+#peticion_item{
+  width:100%;
+  /*background-color:#9fa;*/
+  background-color: $medium-dark-color;
+  color:$medium-light-color;
+  display: flex;
+  height: $peticion_item_height;
+  line-height: $peticion_item_height;
+  margin-bottom:5px;
+  .logo{
+    /*background-color:#eef;*/
+    width:5%;
+    font-size: 20px;
+    height: $peticion_item_height;
+    line-height: $peticion_item_height;
+  }
+  
+   p{
+    float: left;
+    /*background-color: #e99;*/
+    margin-left: 5px;
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: right;
+    padding-right: 5px;
+    height: $peticion_item_height;
+    /*line-height: $peticion_item_height;*/
+  }
+  #nombre_peticion{
+    width:70%;
+    
+  }
+  #fecha_peticion{
+    width:25%;
+    
+  }
+  
+}
+
+
+/*Sobre escribir boostrap*/
+.btn-primary {
+    color: #fff;
+    background-color: #7a00ff;
+    border-color: #5600ff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: $brand-color !important;
+    border-color: #3803a0 !important;
+}
+
+.btn-primary:active, .btn-primary:focus {
+  color: #ffffff !important;
+  background-color: #4d357b !important;
+  border-color: #494F57 !important;
+  box-shadow: inset 0 1px 1px rgba(111, 66, 193, 0.075), 0 0 8px rgba(111, 66, 193, 0.6);
+}
+.form-control:focus {
+  border-color: #6f42c1;
+  box-shadow: inset 0 1px 1px rgba(111, 66, 193, 0.075), 0 0 8px rgba(111, 66, 193, 0.6);
+  
+}

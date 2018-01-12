@@ -1,0 +1,103 @@
+#status_bar {
+  background-color: #3e0082;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  height: 40px;
+  color: #ffffff; }
+  #status_bar #logo {
+    /*background-color:#eef;*/
+    color: #ffffff;
+    width: 10%;
+    font-size: 30px; }
+  #status_bar #noticias {
+    /*background-color: #efe;*/
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1em;
+    overflow-y: hidden; }
+  #status_bar p {
+    float: left;
+    /*background-color: #e99;*/
+    margin-left: 5px;
+    margin-top: 0px;
+    /*font-weight: bold;*/
+    font-size: 0.9em;
+    text-align: right;
+    width: 20%;
+    padding-right: 5px;
+    height: 20px;
+    line-height: 20px;
+    color: #999; }
+    #status_bar p span {
+      font-weight: 100;
+      color: #ffffff; }
+
+#peticion-form {
+  /*background-color:#999;*/
+  padding: 10px;
+  margin: 10px opx; }
+  #peticion-form #button-pedir-area {
+    text-align: right; }
+
+#peticion_area {
+  border: 1px solid;
+  border-color: #999;
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll; }
+
+#peticion_item {
+  width: 100%;
+  /*background-color:#9fa;*/
+  background-color: #3f334c;
+  color: #999;
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 5px; }
+  #peticion_item .logo {
+    /*background-color:#eef;*/
+    width: 5%;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px; }
+  #peticion_item p {
+    float: left;
+    /*background-color: #e99;*/
+    margin-left: 5px;
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: right;
+    padding-right: 5px;
+    height: 30px;
+    /*line-height: $peticion_item_height;*/ }
+  #peticion_item #nombre_peticion {
+    width: 70%; }
+  #peticion_item #fecha_peticion {
+    width: 25%; }
+
+/*Sobre escribir boostrap*/
+.btn-primary {
+  color: #fff;
+  background-color: #7a00ff;
+  border-color: #5600ff; }
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #3e0082 !important;
+  border-color: #3803a0 !important; }
+
+.btn-primary:active, .btn-primary:focus {
+  color: #ffffff !important;
+  background-color: #4d357b !important;
+  border-color: #494F57 !important;
+  box-shadow: inset 0 1px 1px rgba(111, 66, 193, 0.075), 0 0 8px rgba(111, 66, 193, 0.6); }
+
+.form-control:focus {
+  border-color: #6f42c1;
+  box-shadow: inset 0 1px 1px rgba(111, 66, 193, 0.075), 0 0 8px rgba(111, 66, 193, 0.6); }
+
+/*# sourceMappingURL=index.css.map */

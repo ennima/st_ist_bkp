@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restore</title>
+    <style>
+        .peticion_item{
+            background-color: #eee;
+/*            display:flex;*/
+            padding: 0px 10px;
+            height: 30px;
+            line-height: 30px;
+        }
+        
+        .peticion_item #name{
+            text-align: center;
+            
+        }
+        .peticion_item #date{
+            text-align: center;
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="recup_form">
+        <input type="text" name="clip_name" id="clip_name" placeholder="Nombre del Clip" />
+        <input type="text" name="clip_path" id="clip_path" placeholder="Path">
+        <button id="pedir_btn">Pedir</button>
+    </div>
+    <div id="peticiones">
+        <div id="peticion_1" class="peticion_item">
+            <div id="name">
+                <p>Clip Name</p>
+            </div>
+            <div id="date">
+                <p>date</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  
+  <script>
+      
+      $("#pedir_btn").click(function(){
+          console.log("Pidiendo...")
+          let clip_name = $("#clip_name").val()
+          let path = $("#clip_path").val()
+          if(clip_name == "")
+          {
+            $("#clip_name").focus()    
+          }else if(path == "")
+          {
+            $("#clip_path").focus()    
+          }
+          if(clip_name == "" || path == "")
+          {
+            console.log("No es posible hacer la petición")        
+          }else{
+              let peticion_item = `fdg`
+          }
+          
+      })
+  </script>
+</body>
+</html>
